@@ -604,8 +604,6 @@ CONTENT HOME
 /* ----------------------------------------------- Bloco Parallax ----------------------------------------------- */
 
 .bl-parallax {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(/assets/images/img3.webp);
   text-align: center;
   background-repeat: no-repeat;
   background-position: center;
