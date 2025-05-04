@@ -1,0 +1,1007 @@
+/*=========================================================================================================== 
+ESTILOS GERAIS     
+===========================================================================================================*/
+
+@import url("https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@400;500;600;700&display=swap");
+
+* {
+  font-family: "Palanquin Dark", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  background: var(--corPrimary);
+  color: var(--corTertiary);
+  margin: 0;
+  padding: 0;
+}
+
+video,
+source {
+  pointer-events: none;
+  cursor: default;
+}
+
+a {
+  text-decoration: none !important;
+  list-style: none !important;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+  &:hover {
+    transition: 0.3s all ease-in-out;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 40px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+p {
+  margin-bottom: 15px;
+  line-height: 24px;
+}
+
+.title {
+  font-size: 32px;
+  margin: 0;
+  margin-bottom: 30px;
+  color: var(--corSecondary);
+}
+
+.rl-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background: var(--corSecondary);
+  color: var(--corTertiary);
+  text-align: center;
+  width: 100% !important;
+  max-width: fit-content;
+  padding: 8px 24px;
+  border-radius: 50px;
+  border: 2px solid var(--corSecondary) !important;
+  font-weight: 600;
+  margin-top: 30px;
+  line-height: 24px;
+  &:hover {
+    background: transparent;
+    color: var(--corSecondary);
+  }
+}
+
+.rl-btn-transparant {
+  background-color: transparent !important;
+  color: var(--corSecondary) !important;
+  &:hover {
+    background: var(--corSecondary) !important;
+    color: var(--corTertiary) !important;
+  }
+}
+
+.rl-space {
+  margin: 100px 0;
+}
+
+.rl-space-top {
+  margin-top: 100px;
+}
+
+.rl-space-bottom {
+  margin-bottom: 100px;
+}
+
+.container {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    width: calc(100% - 20px);
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+:root {
+  --corPrimary: #1e222c; /* #252d62 */
+  --corSecondary: #c01354;
+  --corGradient: linear-gradient(0deg, #fff, #fff);
+  --corTertiary: #fff;
+}
+
+@keyframes Effect1 {
+  0% {
+    transform: translatey(0);
+  }
+  100% {
+    transform: translatey(-10px);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .title {
+    font-size: 28px;
+  }
+}
+
+/*=========================================================================================================== 
+HEADER    
+===========================================================================================================*/
+
+.bl-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 10px 0;
+  background: rgba(30, 34, 44, 0.45);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  backdrop-filter: blur(4px);
+}
+.bl-header .container {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  user-select: none;
+  transition: all 0.3s ease;
+  &:hover {
+    color: #d6d6ff;
+  }
+}
+
+/* Hamburger menu */
+#openSidebarMenu {
+  display: none;
+}
+.sidebarIconToggle {
+  pointer-events: none;
+}
+.hamburger-content {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espaço entre ícone e texto */
+  pointer-events: auto;
+}
+label.sidebarIconToggle {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espaço entre ícone e texto */
+  cursor: pointer;
+  z-index: 110;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  user-select: none;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Container dos 3 traços verticalmente */
+label.sidebarIconToggle .hamburger-lines {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 22px;
+  height: 16px;
+  transition: all 0.4s ease; /* TRANSIÇÃO SUAVE */
+  pointer-events: auto;
+}
+
+/* Cada traço */
+label.sidebarIconToggle .hamburger-lines div {
+  height: 2px;
+  background: #fff;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Texto "Menu" com transição suave */
+.menu-text {
+  transition: opacity 0.4s ease;
+  pointer-events: auto;
+}
+
+/* Quando ativar: animação dos traços */
+#openSidebarMenu:checked + label .hamburger-lines .part-1 {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+#openSidebarMenu:checked + label .hamburger-lines .horizontal {
+  opacity: 0;
+}
+#openSidebarMenu:checked + label .hamburger-lines .part-2 {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Quando ativar: sumir texto */
+#openSidebarMenu:checked + label .menu-text {
+  opacity: 0;
+  pointer-events: none !important;
+}
+
+/* #openSidebarMenu:checked + label .hamburger-content {
+  pointer-events: none !important;
+} */
+
+/* Quando ativar: mover ícone para frente */
+#openSidebarMenu:checked + label .hamburger-lines {
+  transform: translateX(40px); /* move o hambúrguer para a frente */
+}
+
+/* Sidebar (menu lateral à direita) */
+#sidebarMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 400px;
+  background: #1e222c;
+  box-shadow: -2px 0 12px rgba(0, 0, 0, 0.3);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+  padding-top: 20px;
+  z-index: 99;
+}
+.sidebarMenuInner {
+  background: var(--corPrimary);
+  height: 100dvh;
+}
+#openSidebarMenu:checked ~ #sidebarMenu {
+  transform: translateX(0);
+}
+
+/* Itens do menu */
+.sidebarMenuInner li {
+  list-style: none;
+}
+.sidebarMenuInner li:first-child {
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 0 30px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  user-select: none;
+}
+.sidebarMenuInner li:first-child span {
+  display: block;
+  margin-top: 4px;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0;
+  text-transform: none;
+}
+.sidebarMenuInner li a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  margin: 8px 16px;
+  color: #d6d6ff;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  transition: background 0.25s, color 0.25s;
+  cursor: pointer;
+}
+.sidebarMenuInner li a:hover {
+  background: var(--corSecondary);
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  #sidebarMenu {
+    width: 80% !important;
+  }
+}
+
+/*=========================================================================================================== 
+CONTENT HOME       
+===========================================================================================================*/
+
+/* ----------------------------------------------- Bloco Banner ----------------------------------------------- */
+
+.bl-banner {
+  min-height: 100dvh;
+  z-index: 99;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.bl-banner__conteudo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.bl-banner__title {
+  font-size: 50px;
+  font-weight: 600;
+  overflow: hidden;
+  margin: 0 auto;
+  display: inline-block;
+  color: var(--corSecondary);
+}
+
+.bl-banner__text {
+  color: #fff;
+  margin: 0;
+}
+
+.bl-banner__slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.bl-banner__slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  animation: fade 20s infinite;
+  animation-fill-mode: forwards; /* Mantém o estado final da animação */
+}
+
+.bl-banner__slide:nth-child(1) {
+  img {
+    display: none !important;
+  }
+}
+
+.bl-banner__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(90%);
+  pointer-events: none;
+}
+
+.bl-banner__local {
+  position: absolute;
+  z-index: 1;
+  font-size: 16px;
+  width: 100%;
+  max-width: fit-content;
+  margin-top: 50px;
+  color: var(--corPrimary);
+  background: var(--corTertiary);
+  padding: 10px 16px;
+  border-radius: 50px;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  animation: Effect1 1.1s ease-in-out infinite alternate;
+}
+
+/* Animação de fade */
+.bl-banner__slider .bl-banner__slide:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.bl-banner__slider .bl-banner__slide:nth-child(2) {
+  animation-delay: 4s;
+}
+
+.bl-banner__slider .bl-banner__slide:nth-child(3) {
+  animation-delay: 8s;
+}
+
+.bl-banner__slider .bl-banner__slide:nth-child(4) {
+  animation-delay: 12s;
+}
+
+.bl-banner__slider .bl-banner__slide:nth-child(5) {
+  animation-delay: 16s;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .bl-banner .container {
+    width: calc(100% - 100px);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .bl-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    padding-top: 100px;
+  }
+  .bl-banner__content-right {
+    height: 300px !important;
+    padding: 10px !important;
+  }
+  .bl-banner__slide img {
+    border-radius: 50px !important;
+  }
+  .bl-banner__title {
+    font-size: 32px !important;
+    &:after {
+      margin-left: 5px;
+      margin-bottom: -10px;
+      height: 50px;
+      width: 8px;
+    }
+  }
+}
+
+/* ----------------------------------------------- Bloco Sobre ----------------------------------------------- */
+
+.bl-sobre .title {
+  margin-bottom: 15px !important;
+}
+.bl-sobre__grid {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 30px;
+  max-width: 100%;
+}
+.bl-sobre__content-left {
+  position: relative;
+  figure {
+    margin: 0;
+    position: relative;
+  }
+}
+.bl-sobre__frase {
+  background: var(--corTertiary);
+  padding: 10px 16px;
+  border-radius: 50px;
+  color: var(--corPrimary);
+  position: absolute;
+  right: 10px;
+  top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  animation: Effect1 1.1s ease-in-out infinite alternate;
+}
+.bl-sobre__img-um {
+  width: 350px;
+  height: 500px;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 150px;
+  pointer-events: none;
+}
+.bl-sobre__img-dois {
+  position: absolute;
+  width: 300px;
+  height: 425px;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 150px;
+  border: 20px solid var(--corPrimary);
+  right: 0;
+  bottom: -90px;
+  z-index: 0;
+  pointer-events: none;
+}
+.bl-sobre__content-right {
+  p {
+    margin: 0;
+  }
+}
+.bl-sobre__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 30px;
+  border: 2px solid var(--corTertiary);
+  border-radius: 150px;
+  margin-top: 30px;
+}
+.bl-sobre__conteudo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  h3 {
+    font-size: 18px;
+  }
+}
+.bl-sobre__buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  .rl-btn {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .bl-sobre__grid {
+    display: flex !important;
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+  .bl-sobre__content-left {
+    max-width: fit-content;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .bl-sobre__box {
+    flex-direction: column;
+    gap: 30px !important;
+    border-radius: 50px !important;
+  }
+}
+
+/* ----------------------------------------------- Bloco Parallax ----------------------------------------------- */
+
+.bl-parallax {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/assets/images/img3.webp);
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  /* margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px; */
+  padding: 50px 0;
+  /* position: relative; */
+}
+.bl-parallax .title {
+  color: var(--corTertiary);
+}
+
+.bl-parallax__content {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 25px;
+}
+
+.bl-parallax__efeito {
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
+.bl-parallax__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  z-index: 1;
+  position: relative;
+}
+.bl-parallax__box:hover {
+  svg {
+    fill: var(--corTertiary);
+  }
+  .bl-parallax__icone{
+    background-color: var(--corPrimary);
+    color: var(--corTertiary);
+    transform: scale(1.10);
+  }
+}
+
+.bl-parallax__icone{
+  border-radius: 50%;
+  padding: 20px;
+  color: var(--corPrimary);
+  background-color: var(--corTertiary);
+  max-width: 75px;
+  width: 75px;
+  height: 75px;
+  transition: 0.3s all ease-in-out;
+}
+
+.bl-parallax__box svg {
+  width: 100%;
+  height: 100%;
+  transition: 0.3s all ease-in-out;
+}
+
+@media screen and (max-width: 1023px) {
+  .bl-parallax__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bl-parallax__content {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    gap: 50px;
+  }
+}
+
+/* ----------------------------------------------- Bloco Roteiro ----------------------------------------------- */
+.bl-roteiro .title {
+  text-align: center;
+}
+.bl-roteiro__grid {
+  display: flex;
+  flex-direction: column;
+}
+.bl-roteiro__box {
+  position: relative;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 50px;
+  align-items: center;
+  border-radius: 50px;
+  border-top: 2px dashed var(--corTertiary);
+  padding: 30px;
+  text-align: right;
+  border-right: 2px dashed var(--corTertiary);
+  &:nth-child(1) {
+    .bl-roteiro__svg {
+      bottom: -48px;
+      right: -15px;
+      transform: rotateZ(-75deg);
+    }
+  }
+  &:nth-child(2) {
+    .bl-roteiro__svg {
+      bottom: -25px;
+      left: -19px;
+      border-radius: 50px;
+    }
+  }
+  &:nth-child(3) {
+    .bl-roteiro__svg {
+      bottom: -48px;
+      right: -15px;
+      border-radius: 10px;
+    }
+  }
+  &:nth-child(4) {
+    .bl-roteiro__svg {
+      bottom: 0;
+      left: 0;
+    }
+  }
+  &:nth-child(even) {
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+    border-left: 2px dashed var(--corTertiary);
+    border-right: none;
+  }
+}
+.bl-roteiro__box:hover {
+  .bl-roteiro__image img {
+    border-radius: 50px !important;
+  }
+  .bl-roteiro__conteudo {
+    transform: translateY(-10px);
+  }
+}
+.bl-roteiro__svg {
+  position: absolute;
+  background: var(--corPrimary);
+  width: 65px;
+  height: 65px;
+  z-index: 1;
+  padding: 5px;
+}
+.bl-roteiro__svg1 {
+  position: absolute;
+  background: var(--corPrimary);
+  width: 65px;
+  height: 65px;
+  z-index: 1;
+  top: -20px;
+  left: -12px;
+  transform: rotateZ(45deg);
+  padding: 5px;
+}
+.bl-roteiro__image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.bl-roteiro__image img {
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
+  border-radius: 150px;
+  transition: 0.3s all ease-in-out;
+  pointer-events: none;
+}
+.bl-roteiro__conteudo {
+  position: relative;
+  transition: 0.3s all ease-in-out;
+  z-index: 9;
+}
+.bl-roteiro__title {
+  margin-bottom: 10px;
+  color: var(--corSecondary);
+}
+
+@media screen and (max-width: 1023px) {
+  .bl-roteiro__box {
+    display: flex !important;
+    flex-direction: column;
+    gap: 20px !important;
+    text-align: right !important;
+    &:nth-child(odd) {
+      flex-direction: column-reverse;
+      text-align: left !important;
+    }
+    &:nth-child(1) {
+      .bl-roteiro__svg {
+        bottom: -40px !important;
+        right: -5px !important;
+        transform: rotateZ(-90deg) !important;
+      }
+    }
+    &:nth-child(2) {
+      .bl-roteiro__svg {
+        bottom: -25px;
+        left: -5px !important;
+        border-radius: 50px;
+      }
+    }
+    &:nth-child(3) {
+      .bl-roteiro__svg {
+        bottom: -40px !important;
+        right: -5px !important;
+        border-radius: 10px;
+      }
+    }
+    &:nth-child(4) {
+      .bl-roteiro__svg {
+        bottom: 0;
+        left: 0;
+      }
+    }
+  }
+  .bl-roteiro__svg {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .bl-roteiro__svg1 {
+    width: 50px !important;
+    height: 50px !important;
+    left: -5px !important;
+  }
+}
+
+/* ----------------------------------------------- Bloco Pontos Turisticos ----------------------------------------------- */
+
+.bl-turisticos .title {
+  text-align: center;
+}
+.bl-turisticos__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px 20px;
+}
+.bl-turisticos__card {
+  position: relative;
+  color: var(--corTertiary);
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 150px;
+  overflow: hidden;
+  min-height: 400px;
+  transition: 0.3s all ease-in-out !important;
+  &:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      0deg,
+      rgba(30, 34, 44, 1) 8%,
+      rgba(63, 208, 212, 0) 100%
+    );
+    opacity: 0;
+    border-radius: 150px;
+    transition: 0.3s all ease-in-out !important;
+
+    pointer-events: none;
+    z-index: 1;
+  }
+
+}
+.bl-turisticos__card:hover {
+  border-radius: 50px;
+  transition: 0.3s all ease-in-out !important;
+  &::before {
+    opacity: 1;
+    border-radius: 50px;
+    transition: 0.3s all ease-in-out !important;
+  }
+
+  .bl-turisticos__title {
+    transform: translateY(-20px);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .bl-turisticos__text {
+    transform: translateY(-20px);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .bl-turisticos__botao {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(30px);
+    transition-delay: 0s;
+    pointer-events: auto;
+  }
+}
+
+.bl-turisticos__conteudo {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bl-turisticos__title {
+  margin-bottom: 10px;
+}
+
+.bl-turisticos__title,
+.bl-turisticos__text {
+  transition: transform 0.3s ease-in-out;
+}
+
+.bl-turisticos__botao {
+  position: absolute; /* tira do fluxo */
+  bottom: 30px; /* posiciona fixo na base do card */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(60px);
+  transition: opacity 0.4s ease, transform 0.4s ease,
+    visibility 0s linear 0.4s;
+  pointer-events: none;
+  text-decoration: underline;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bl-turisticos__card:hover a {
+  pointer-events: auto;
+}
+.bl-turisticos .rl-btn {
+  margin-top: 50px;
+  display: flex;
+  justify-self: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .bl-turisticos__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr !important;
+    gap: 30px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bl-turisticos__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+@media screen and (max-width: 501px) {
+  .bl-turisticos__grid {
+    display: grid;
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/*=========================================================================================================== 
+FOOTER       
+===========================================================================================================*/
+
+.bl-footer {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 150px 20px 0 20px;
+}
+.bl-footer__content {
+  background: var(--corPrimary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  border-radius: 50px 50px 0 0;
+  padding: 10px 20px;
+}
+.bl-footer__copyright,
+.bl-footer__desenvolvido {
+  color: var(--corTertiary);
+  margin: 0;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  .bl-footer__content {
+    flex-direction: column;
+  }
+}

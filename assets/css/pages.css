@@ -1,0 +1,159 @@
+/*=========================================================================================================== 
+ESTILOS GERAIS SOBRE
+===========================================================================================================*/
+
+/*---------------------------------- Bloco Banner Intero ------------------------------------*/
+
+/* .bl-banner-interna {
+} */
+.bl-BannerInterna__Content {
+  width: 100%;
+  height: 250px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+.bl-banner-interna .container {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+}
+.bl-banner-interna__title {
+  color: var(--corTertiary) !important;
+  font-size: 32px;
+  @media only screen and (max-width: 768px) {
+    font-size: 28px;
+  }
+}
+.bl-banner-interna .breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.bl-banner-interna .breadcrumbs__link {
+  color: var(--corTertiary);
+}
+
+/*---------------------------------- Bloco Texto ------------------------------------*/
+
+.bl-texto{
+  &:hover{
+    .bl-texto__image{
+      transform: scale(1.10);
+    }
+  }
+}
+.bl-texto__grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 30px;
+}
+.title{
+  margin-bottom: 20px;
+}
+.bl-texto__conteudo{
+  position: relative;
+  padding-left: 50px;
+  /* border-left: 2px dashed var(--corTertiary); */
+}
+.bl-texto__conteudo::before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 0;
+  width: 2px;
+  height: 150%;
+  z-index: -1;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    #fff,        /* Cor inicial do gradiente */
+    #fff 5px,    /* Tamanho do traço */
+    transparent 5px,
+    transparent 10px
+  );
+}
+.bl-texto__conteudo::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -37px;
+  width: 30px;
+  height: 30px;
+  border: 2px dashed var(--corTertiary);
+  background: var(--corPrimary);
+  border-radius: 50%;
+}
+
+.bl-texto__icone{
+  object-fit: contain;
+  width: 50px;
+  height: 50px;
+}
+.bl-texto__figure{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 50px;
+}
+.bl-texto__image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s all ease-in-out !important;
+  pointer-events: none;
+  border-radius: 50px;
+}
+.bl-texto__image-contain{
+  height: 550px;
+}
+
+.bl-texto:nth-child(even) {
+  text-align: right;
+  .bl-texto__conteudo{
+    padding: auto;
+    padding-right: 50px;
+  }
+  .bl-texto__conteudo::before {
+    left: auto;
+    right: 15px;
+  }
+  .bl-texto__conteudo::after {
+    left: auto;
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .bl-texto__grid{
+    display: flex !important;
+    flex-direction: column;
+  }
+  .bl-texto:nth-child(even) {
+    .bl-texto__grid{
+      flex-direction: column-reverse;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bl-texto__conteudo::before {
+    height: 120% !important;
+  }
+}
+
+/*---------------------------------- Bloco Mapa ------------------------------------*/
+
+/* .bl-mapa{
+} */
+.bl-mapa__iframe{
+  width: 100%;
+  height: 600px;
+  border-radius: 25px;
+  border: 2px solid var(--corTertiary);
+}

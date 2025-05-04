@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="icon" href="assets/images/favicon.webp">
+    <title>TOURZN - Conheça Nova Zelândia</title>
+  </head>
+  <body>
+    <main>
+      <!--========================================================================================================= 
+    HEADER 
+    ==========================================================================================================-->
+
+      <header class="bl-header">
+        <div class="container">
+          <h1 class="logo">
+            Tour<span style="color: #001b69">N</span
+            ><span style="color: #c9072a">Z</span>
+          </h1>
+          <input type="checkbox" id="openSidebarMenu" />
+          <label for="openSidebarMenu" class="sidebarIconToggle">
+            <div class="hamburger-content">
+              <div class="hamburger-lines">
+                <div class="part-1"></div>
+                <div class="horizontal"></div>
+                <div class="part-2"></div>
+              </div>
+              <span class="menu-text">Menu</span>
+            </div>
+          </label>
+          <nav id="sidebarMenu">
+            <ul class="sidebarMenuInner">
+              <li>TourNZ <span>Bem vindo!!!</span></li>
+              <li>
+                <a href="index.html">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-house"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"
+                    />
+                  </svg>
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="sobre.html">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-pin"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M4.146.146A.5.5 0 0 1 4.5 0h7a.5.5 0 0 1 .5.5c0 .68-.342 1.174-.646 1.479-.126.125-.25.224-.354.298v4.431l.078.048c.203.127.476.314.751.555C12.36 7.775 13 8.527 13 9.5a.5.5 0 0 1-.5.5h-4v4.5c0 .276-.224 1.5-.5 1.5s-.5-1.224-.5-1.5V10h-4a.5.5 0 0 1-.5-.5c0-.973.64-1.725 1.17-2.189A6 6 0 0 1 5 6.708V2.277a3 3 0 0 1-.354-.298C4.342 1.674 4 1.179 4 .5a.5.5 0 0 1 .146-.354m1.58 1.408-.002-.001zm-.002-.001.002.001A.5.5 0 0 1 6 2v5a.5.5 0 0 1-.276.447h-.002l-.012.007-.054.03a5 5 0 0 0-.827.58c-.318.278-.585.596-.725.936h7.792c-.14-.34-.407-.658-.725-.936a5 5 0 0 0-.881-.61l-.012-.006h-.002A.5.5 0 0 1 10 7V2a.5.5 0 0 1 .295-.458 1.8 1.8 0 0 0 .351-.271c.08-.08.155-.17.214-.271H5.14q.091.15.214.271a1.8 1.8 0 0 0 .37.282"
+                    />
+                  </svg>
+                  Sobre
+                </a>
+              </li>
+              <li>
+                <a href="pontos-turisticos.html">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    fill="currentColor"
+                    class="bi bi-geo-alt"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"
+                    />
+                    <path
+                      d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+                    />
+                  </svg>
+                  Pontos turísticos
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <!--========================================================================================================= 
+    CONTANT 
+    ==========================================================================================================-->
+
+      <!--------------------------------------------- Bloco Banner --------------------------------------------->
+
+      <section
+        class="bl-banner"
+        style="
+          background-image: linear-gradient(
+              rgba(0, 0, 0, 0.8),
+              rgb(0, 0, 0, 0.8)
+            ),
+            url(assets/images/img9.webp);
+        "
+      >
+        <div class="bl-banner__conteudo">
+          <div class="container">
+            <h3>Descubra a beleza</h3>
+            <h1 id="bl-banner__title" class="bl-banner__title">
+              Nova Zelândia
+            </h1>
+            <p class="bl-banner__text">
+              A Nova Zelândia é um país repleto de paisagens naturais
+              deslumbrantes. Montanhas, praias, florestas e lagos compõem
+              cenários únicos. O melhor é que esses lugares ficam bem próximos
+              uns dos outros. É fácil se deslocar e conhecer várias belezas em
+              pouco tempo. Ideal para quem busca aventura e contato com a
+              natureza.
+            </p>
+            <a href="#sobre" class="rl-btn"
+              >Começar
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-arrow-right"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="bl-banner__content-right">
+          <div class="bl-banner__slider">
+            <div class="bl-banner__slide">
+              <p class="bl-banner__local">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  class="bi bi-geo-alt"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"
+                  />
+                  <path
+                    d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+                  />
+                </svg>
+                Monte Tongariro
+              </p>
+              <img src="assets/images/img9.webp" alt="" />
+            </div>
+            <div class="bl-banner__slide">
+              <p class="bl-banner__local">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  class="bi bi-geo-alt"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"
+                  />
+                  <path
+                    d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+                  />
+                </svg>
+                Lago Pukaki
+              </p>
+              <img src="assets/images/img1.webp" alt="" />
+            </div>
+            <div class="bl-banner__slide">
+              <p class="bl-banner__local">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  class="bi bi-geo-alt"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"
+                  />
+                  <path
+                    d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+                  />
+                </svg>
+                Lago Hayes
+              </p>
+              <img src="assets/images/img5.webp" alt="" />
+            </div>
+            <div class="bl-banner__slide">
+              <p class="bl-banner__local">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  class="bi bi-geo-alt"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"
+                  />
+                  <path
+                    d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+                  />
+                </svg>
+                Região de Mackenzie Country
+              </p>
+              <img src="assets/images/img6.webp" alt="" />
+            </div>
+            <div class="bl-banner__slide">
+              <p class="bl-banner__local">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  class="bi bi-geo-alt"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"
+                  />
+                  <path
+                    d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+                  />
+                </svg>
+                Lake Tekapo
+              </p>
+              <img src="assets/images/lake-tekapo.webp" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--------------------------------------------- Bloco Sobre --------------------------------------------->
+
+      <section id="sobre" class="bl-sobre rl-space">
+        <div class="container">
+          <div class="bl-sobre__grid">
+            <div class="bl-sobre__content-left">
+              <figure class="">
+                <p class="bl-sobre__frase">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    fill="currentColor"
+                    class="bi bi-geo-alt"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"
+                    />
+                    <path
+                      d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+                    />
+                  </svg>
+                  Locais deslumbrantes
+                </p>
+                <img
+                  src="assets/images/img1.webp"
+                  class="bl-sobre__img-um"
+                  alt=""
+                />
+                <img
+                  src="assets/images/img2.webp"
+                  class="bl-sobre__img-dois"
+                  alt=""
+                />
+              </figure>
+            </div>
+            <div class="bl-sobre__content-right">
+              <h2 class="title">Conheça um pouco da Nova Zelândia.</h2>
+              <p>
+                A Nova Zelândia é um paraíso no hemisfério sul, composta por
+                duas ilhas principais que abrigam uma impressionante diversidade
+                de paisagens naturais, como montanhas nevadas, fiordes, lagos
+                cristalinos e praias intocadas. Reconhecida mundialmente por sua
+                preservação ambiental, segurança e qualidade de vida, também se
+                destaca pela forte influência da cultura Maori, presente nas
+                tradições, artes e arquitetura. Cidades como Auckland,
+                Queenstown e Wellington oferecem uma vibrante combinação de
+                modernidade, cultura e aventura. Com distâncias curtas entre as
+                atrações, viajar pelo país é fácil e proporciona experiências
+                autênticas em meio à natureza exuberante.
+              </p>
+              <div class="bl-sobre__box">
+                <div class="bl-sobre__conteudo">
+                  <h3>Capital:</h3>
+                  <p>Wellington</p>
+                </div>
+                <div class="bl-sobre__conteudo">
+                  <h3>Área:</h3>
+                  <p>268.021 km²</p>
+                </div>
+                <div class="bl-sobre__conteudo">
+                  <h3>População:</h3>
+                  <p>5,223 milhões</p>
+                </div>
+              </div>
+              <div class="bl-sobre__buttons">
+                <a href="sobre.html" class="rl-btn"
+                  >Saiba Mais
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--------------------------------------------- Bloco Parallax --------------------------------------------->
+
+      <section class="bl-parallax rl-space">
+        <div class="container">
+          <h2 class="title">Motivos para visitar Nova Zelândia</h2>
+          <div class="bl-parallax__content">
+            <svg
+              class="bl-parallax__efeito"
+              xmlns="http://www.w3.org/2000/svg"
+              width="1115"
+              height="80"
+              viewBox="0 0 1115 80"
+              fill="none"
+            >
+              <path
+                d="M1 1.99993C202 122.5 575 38.5 575 38.5C773.5 2 860.5 -38.0001 1114.5 78.9999"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-dasharray="10 10"
+              />
+            </svg>
+            <div class="bl-parallax__box">
+              <figure class="bl-parallax__icone">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-signpost-split"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M7 7V1.414a1 1 0 0 1 2 0V2h5a1 1 0 0 1 .8.4l.975 1.3a.5.5 0 0 1 0 .6L14.8 5.6a1 1 0 0 1-.8.4H9v10H7v-5H2a1 1 0 0 1-.8-.4L.225 9.3a.5.5 0 0 1 0-.6L1.2 7.4A1 1 0 0 1 2 7zm1 3V8H2l-.75 1L2 10zm0-5h6l.75-1L14 3H8z"
+                  />
+                </svg>
+              </figure>
+              <h3 class="bl-parallax__title">Natureza deslumbrante</h3>
+              <p class="bl-parallax__text">
+                O país abriga florestas antigas de árvores gigantes, vulcões
+                ativos e adormecidos, fiordes impressionantes esculpidos por
+                geleiras, além de montanhas majestosas cobertas de neve.
+              </p>
+            </div>
+            <div class="bl-parallax__box">
+              <figure class="bl-parallax__icone">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-map"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.5.5 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103M10 1.91l-4-.8v12.98l4 .8zm1 12.98 4-.8V1.11l-4 .8zm-6-.8V1.11l-4 .8v12.98z"
+                  />
+                </svg>
+              </figure>
+              <h3 class="bl-parallax__title">Mini viagens</h3>
+              <p class="bl-parallax__text">
+                Oferece várias opções de viagens como observação de baleias em
+                Kaikoura, trilhas na Costa de Catlins e degustações de vinho em
+                Marlborough, Hawke’s Bay e Wellington.
+              </p>
+            </div>
+            <div class="bl-parallax__box">
+              <figure class="bl-parallax__icone">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-cup-hot"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M.5 6a.5.5 0 0 0-.488.608l1.652 7.434A2.5 2.5 0 0 0 4.104 16h5.792a2.5 2.5 0 0 0 2.44-1.958l.131-.59a3 3 0 0 0 1.3-5.854l.221-.99A.5.5 0 0 0 13.5 6zM13 12.5a2 2 0 0 1-.316-.025l.867-3.898A2.001 2.001 0 0 1 13 12.5M2.64 13.825 1.123 7h11.754l-1.517 6.825A1.5 1.5 0 0 1 9.896 15H4.104a1.5 1.5 0 0 1-1.464-1.175"
+                  />
+                  <path
+                    d="m4.4.8-.003.004-.014.019a4 4 0 0 0-.204.31 2 2 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.6.6 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3 3 0 0 1-.202.388 5 5 0 0 1-.253.382l-.018.025-.005.008-.002.002A.5.5 0 0 1 3.6 4.2l.003-.004.014-.019a4 4 0 0 0 .204-.31 2 2 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.6.6 0 0 0-.09-.252A4 4 0 0 0 3.6 2.8l-.01-.012a5 5 0 0 1-.37-.543A1.53 1.53 0 0 1 3 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a6 6 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 4.4.8m3 0-.003.004-.014.019a4 4 0 0 0-.204.31 2 2 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.6.6 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3 3 0 0 1-.202.388 5 5 0 0 1-.253.382l-.018.025-.005.008-.002.002A.5.5 0 0 1 6.6 4.2l.003-.004.014-.019a4 4 0 0 0 .204-.31 2 2 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.6.6 0 0 0-.09-.252A4 4 0 0 0 6.6 2.8l-.01-.012a5 5 0 0 1-.37-.543A1.53 1.53 0 0 1 6 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a6 6 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 7.4.8m3 0-.003.004-.014.019a4 4 0 0 0-.204.31 2 2 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.6.6 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3 3 0 0 1-.202.388 5 5 0 0 1-.252.382l-.019.025-.005.008-.002.002A.5.5 0 0 1 9.6 4.2l.003-.004.014-.019a4 4 0 0 0 .204-.31 2 2 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.6.6 0 0 0-.09-.252A4 4 0 0 0 9.6 2.8l-.01-.012a5 5 0 0 1-.37-.543A1.53 1.53 0 0 1 9 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a6 6 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 10.4.8"
+                  />
+                </svg>
+              </figure>
+              <h3 class="bl-parallax__title">Gastronomia de primeira</h3>
+              <p class="bl-parallax__text">
+                Oferecendo pratos tradicionais maoris como o hāngī e
+                especialidades locais como pavlova, cordeiro, frutos do mar,
+                batata-doce, mel manuka entre outros.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--------------------------------------------- Bloco Roteiro --------------------------------------------->
+
+      <section class="bl-roteiro rl-space">
+        <div class="container">
+          <h2 class="title">Onde ir na Nova Zelândia</h2>
+          <div class="bl-roteiro__grid">
+            <div class="bl-roteiro__box">
+              <svg
+                class="bl-roteiro__svg1"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-airplane"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849m.894.448C7.111 2.02 7 2.569 7 3v4a.5.5 0 0 1-.276.447l-5.448 2.724a.5.5 0 0 0-.276.447v.792l5.418-.903a.5.5 0 0 1 .575.41l.5 3a.5.5 0 0 1-.14.437L6.708 15h2.586l-.647-.646a.5.5 0 0 1-.14-.436l.5-3a.5.5 0 0 1 .576-.411L15 11.41v-.792a.5.5 0 0 0-.276-.447L9.276 7.447A.5.5 0 0 1 9 7V3c0-.432-.11-.979-.322-1.401C8.458 1.159 8.213 1 8 1s-.458.158-.678.599"
+                />
+              </svg>
+              <figure class="bl-roteiro__image">
+                <img src="assets/images/img4.webp" alt="" />
+              </figure>
+              <div class="bl-roteiro__conteudo">
+                <h3 class="bl-roteiro__title">Viagens para a ilha norte</h3>
+                <p>
+                  Sua visita na Ilha Norte pode incluir vulcões, piscinas de
+                  lama borbulhante e gêiseres jorrando, relaxar em ilhas
+                  idílicas e explorar metrópoles emocionantes.
+                </p>
+              </div>
+              <svg
+                class="bl-roteiro__svg"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-send"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z"
+                />
+              </svg>
+            </div>
+            <div class="bl-roteiro__box">
+              <svg
+                class="bl-roteiro__svg"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-tree"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8.416.223a.5.5 0 0 0-.832 0l-3 4.5A.5.5 0 0 0 5 5.5h.098L3.076 8.735A.5.5 0 0 0 3.5 9.5h.191l-1.638 3.276a.5.5 0 0 0 .447.724H7V16h2v-2.5h4.5a.5.5 0 0 0 .447-.724L12.31 9.5h.191a.5.5 0 0 0 .424-.765L10.902 5.5H11a.5.5 0 0 0 .416-.777zM6.437 4.758A.5.5 0 0 0 6 4.5h-.066L8 1.401 10.066 4.5H10a.5.5 0 0 0-.424.765L11.598 8.5H11.5a.5.5 0 0 0-.447.724L12.69 12.5H3.309l1.638-3.276A.5.5 0 0 0 4.5 8.5h-.098l2.022-3.235a.5.5 0 0 0 .013-.507"
+                />
+              </svg>
+              <div class="bl-roteiro__conteudo">
+                <h3 class="bl-roteiro__title">Viagens para a ilha sul</h3>
+                <p>
+                  Lar de 10 dos 14 parques nacionais da Nova Zelândia, a Ilha
+                  Sul é conhecida por suas paisagens alpinas de cair o queixo,
+                  geleiras geladas e experiências divertidas com a vida
+                  selvagem.
+                </p>
+              </div>
+              <figure class="bl-roteiro__image">
+                <img src="assets/images/img5.webp" alt="" />
+              </figure>
+            </div>
+            <div class="bl-roteiro__box">
+              <figure class="bl-roteiro__image">
+                <img src="assets/images/img6.webp" alt="" />
+              </figure>
+              <div class="bl-roteiro__conteudo">
+                <h3 class="bl-roteiro__title">
+                  Viage de carro pelo país
+                </h3>
+                <p>
+                  A Nova Zelândia proporciona viagens de carro espetaculares,
+                  com rotas pela Costa Oeste da Ilha Sul, lagos deslumbrantes
+                  como Tekapo e Pukaki, e a estrada Twin Coast Discovery na Ilha
+                  Norte.
+                </p>
+              </div>
+              <svg
+                class="bl-roteiro__svg"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-car-front-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679q.05.242.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.8.8 0 0 0 .381-.404l.792-1.848ZM3 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2m10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2M6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2zM2.906 5.189a.51.51 0 0 0 .497.731c.91-.073 3.35-.17 4.597-.17s3.688.097 4.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 11.691 3H4.309a.5.5 0 0 0-.447.276L2.906 5.19Z"
+                />
+              </svg>
+            </div>
+            <div class="bl-roteiro__box">
+              <div class="bl-roteiro__conteudo">
+                <h3 class="bl-roteiro__title">Tradições que encantam</h3>
+                <p>
+                  Não deixe de explorar a cultura Maori, população original da
+                  Nova Zelândia, que, ao lado dos kiwis, contribui para o charme
+                  e a identidade única do país.
+                </p>
+              </div>
+              <figure class="bl-roteiro__image">
+                <img src="assets/images/img7.webp" alt="" />
+              </figure>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bl-roteiro__svg bi bi-signpost"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M7 1.414V4H2a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h5v6h2v-6h3.532a1 1 0 0 0 .768-.36l1.933-2.32a.5.5 0 0 0 0-.64L13.3 4.36a1 1 0 0 0-.768-.36H9V1.414a1 1 0 0 0-2 0M12.532 5l1.666 2-1.666 2H2V5z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--------------------------------------------- Bloco Pontos Turisticos --------------------------------------------->
+
+      <section class="bl-turisticos rl-space">
+        <div class="container">
+          <h2 class="title">Pontos turísticos</h2>
+          <div class="bl-turisticos__grid">
+            <div
+              class="bl-turisticos__card"
+              style="
+                background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.4),
+                    rgb(0, 0, 0, 0.4)
+                  ),
+                  url(assets/images/milford-sound.webp);
+              "
+            >
+              <div class="bl-turisticos__conteudo">
+                <h3 class="bl-turisticos__title">Milford Sound</h3>
+                <p class="bl-turisticos__text">
+                  Milford Sound, localizado na Ilha Sul da Nova Zelândia, é um
+                  fiorde formado pela erosão das geleiras e pelo vento.
+                </p>
+              </div>
+            </div>
+            <div
+              class="bl-turisticos__card"
+              style="
+                background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.4),
+                    rgb(0, 0, 0, 0.4)
+                  ),
+                  url(assets/images/te-puia.webp);
+              "
+            >
+              <div class="bl-turisticos__conteudo">
+                <h3 class="bl-turisticos__title">Te Puia</h3>
+                <p class="bl-turisticos__text">
+                  É uma escola dedicada à preservação e ensino das artes
+                  tradicionais indígenas Maori, ele abriga as escolas nacionais
+                  especializadas em três principais formas de arte Maori
+                </p>
+              </div>
+            </div>
+            <div
+              class="bl-turisticos__card"
+              style="
+                background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.4),
+                    rgb(0, 0, 0, 0.4)
+                  ),
+                  url(assets/images/sky-tower.webp);
+              "
+            >
+              <div class="bl-turisticos__conteudo">
+                <h3 class="bl-turisticos__title">Sky Tower</h3>
+                <p class="bl-turisticos__text">
+                  A Sky Tower é uma torre de comunicação e observação localizada
+                  em Auckland. Com 328 metros de altura é um ícone da cidade e
+                  um ponto turístico popular
+                </p>
+              </div>
+            </div>
+            <div
+              class="bl-turisticos__card"
+              style="
+                background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.4),
+                    rgb(0, 0, 0, 0.4)
+                  ),
+                  url(assets/images/routeburn-track.webp);
+              "
+            >
+              <div class="bl-turisticos__conteudo">
+                <h3 class="bl-turisticos__title">Routeburn Track</h3>
+                <p class="bl-turisticos__text">
+                  A Routeburn Track é uma trilha de 32 km na Ilha Sul, que pode
+                  ser percorrida em ambos os sentidos, ligando Queenstown, nos
+                  Alpes do Sul, ao Divide, próximo a Milford Sound.
+                </p>
+              </div>
+            </div>
+            <div
+              class="bl-turisticos__card"
+              style="
+                background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.4),
+                    rgb(0, 0, 0, 0.4)
+                  ),
+                  url(assets/images/waiotapu.webp);
+              "
+            >
+              <div class="bl-turisticos__conteudo">
+                <h3 class="bl-turisticos__title">Waiotapu</h3>
+                <p class="bl-turisticos__text">
+                  Waiotapu Thermal Wonderland é um parque geotérmico, famoso por
+                  suas piscinas coloridas, gêiseres e formações vulcânicas
+                  únicas, localizado próximo a Rotorua.
+                </p>
+              </div>
+            </div>
+            <div
+              class="bl-turisticos__card"
+              style="
+                background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.4),
+                    rgb(0, 0, 0, 0.4)
+                  ),
+                  url(assets/images/te-papap-tongarewa.webp);
+              "
+            >
+              <div class="bl-turisticos__conteudo">
+                <h3 class="bl-turisticos__title">Te Papa Tongarewa</h3>
+                <p class="bl-turisticos__text">
+                  O Museu da Nova Zelândia Te Papa Tongarewa é o museu nacional
+                  da Nova Zelândia. Situa-se em Wellington na ilha norte.
+                </p>
+              </div>
+            </div>
+            <div
+              class="bl-turisticos__card"
+              style="
+                background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.4),
+                    rgb(0, 0, 0, 0.4)
+                  ),
+                  url(assets/images/lake-tekapo.webp);
+              "
+            >
+              <div class="bl-turisticos__conteudo">
+                <h3 class="bl-turisticos__title">Lake Tekapo</h3>
+                <p class="bl-turisticos__text">
+                  O Lago Tekapo é o segundo maior de três lagos aproximadamente
+                  paralelos que correm de norte a sul ao longo da borda norte da
+                  Bacia Mackenzie, na Ilha Sul.
+                </p>
+              </div>
+            </div>
+            <div
+              class="bl-turisticos__card"
+              style="
+                background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.4),
+                    rgb(0, 0, 0, 0.4)
+                  ),
+                  url(assets/images/museu-tawhiti.webp);
+              "
+            >
+              <div class="bl-turisticos__conteudo">
+                <h3 class="bl-turisticos__title">Museu Tawhiti</h3>
+                <p class="bl-turisticos__text">
+                  O Museu Tawhiti, localizado em Hāwera é um museu privado
+                  conhecido por suas exposições realistas e modelos em escala,
+                  que contam a história da região de Taranaki
+                </p>
+              </div>
+            </div>
+          </div>
+          <a href="pontos-turisticos.html" class="rl-btn"
+            >Saiba Mais
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-arrow-right"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+              />
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <!--========================================================================================================= 
+    FOOTER 
+    ==========================================================================================================-->
+
+      <footer
+        class="bl-footer"
+        style="
+          background-image: linear-gradient(
+              rgba(0, 0, 0, 0.4),
+              rgb(0, 0, 0, 0.4)
+            ),
+            url(assets/images/img8.webp);
+        "
+      >
+        <div class="bl-footer__content">
+          <p class="bl-footer__copyright">
+            TOURNZ © - Todos os direitos reservados
+          </p>
+          <p class="bl-footer__desenvolvido">Desenvolvido por Raí Lopes</p>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
